@@ -1,6 +1,5 @@
 ::OPTIONAL: Install DVDStyler
 ::HOME: http://www.dvdstyler.org/
-http://sourceforge.net/projects/dvdstyler/files/dvdstyler/2.5.2/DVDStyler-2.5.2-win32.exe
-::URL|ALL|http://sourceforge.net/projects/dvdstyler/files/dvdstyler/2.5.2/DVDStyler-2.5.2-win32.exe|packages/DVDStyler-2.5.2-win32.exe
-
+::URL|ALL|http://downloads.sourceforge.net/dvdstyler/2.9/DVDStyler-2.9-win32.exe|packages/DVDStyler-2.9-win32.exe
 @echo off
+todo.pl "%Z%\packages\DVDStyler-2.9-win32.exe /SILENT"

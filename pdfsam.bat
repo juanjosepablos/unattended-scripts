@@ -8,4 +8,4 @@
 ::%PROGRAMFILES%\PDF Split And Merge Basic\pdfsam-config.xml
 
 :: Install PDFSam
-todo.pl "msiexec /qb /i %Z%\packages\pdfsam\pdfsam-%PROCESSOR_ARCHITECTURE%-v2.2.3.msi LOCALE=Spanish"
+todo.pl "msiexec /qb /i %Z%\packages\pdfsam\pdfsam-%PROCESSOR_ARCHITECTURE%-v2.2.3.msi LOCALE_CODE=Spanish"
