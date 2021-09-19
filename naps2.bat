@@ -1,12 +1,16 @@
 :: OPTIONAL:  Install NAPS2
 :: HOME: https://sourceforge.net/projects/naps2/
-http://downloads.sourceforge.net/project/naps2/3.0b1/naps2-3.0b1-setup.exe?r=&ts=1418919525&use_mirror=kent
-:: URL|All|http://downloads.sourceforge.net/naps2/3.0b1/naps2-3.0b1-setup.exe|packages/naps/naps2-3.0b1-setup.exe
+:: URL|All|http://downloads.sourceforge.net/naps2/6.1.2/naps2-6.1.2-setup.exe|packages/naps/naps2-6.1.2-setup.exe
 :: URL|All|http://downloads.sourceforge.net/naps2/2.6.3/naps2-2.6.3-setup.exe|packages/naps/naps2-2.6.3-setup.exe
 
 @Echo off
+:: OCR Feature
+:: COPY to %APPDATA%\NAPS2\components
+:: URL|All|http://downloads.sourceforge.net/naps2/components/tesseract-4.0.0b4/spa.traineddata.gz|packages/naps/tesseract-4.0.0b4/spa.traineddata.gz
 
-todo.pl "shortcut.pl  \"%ProgramFiles%\naps2\naps2.exe\" special:AllUsersDesktop\naps2"
-todo.pl "%Z%\packages\naps\naps2-3.0b1-setup.exe /VERYSILENT /NORESTART /LOG"
+IF EXIST "%ProgramFiles%"\NAPS2 todo.pl "shortcut.pl  \"%ProgramFiles%\NAPS2\NAPS2.exe\" special:AllUsersDesktop\NAPS2"
+IF EXIST "%ProgramFiles(x86)%"\NAPS2 todo.pl "shortcut.pl  \"%ProgramFiles(x86)%\NAPS2\NAPS2.exe\" special:AllUsersDesktop\NAPS2"
+todo.pl "%Z%\packages\naps\naps2-6.1.2-setup.exe /VERYSILENT /NORESTART /LOG"
 
-todo.pl dotnet.bat
+::skip for now.
+::todo.pl dotnet.bat
